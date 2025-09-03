@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Apple-inspired neutral theme */
+  --background: 0 0% 98%;
+  --foreground: 240 10% 9%;
+  --muted: 240 4% 96%;
+  --muted-foreground: 240 5% 64%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 9%;
+  --border: 240 6% 90%;
+  --input: 240 6% 90%;
+  --primary: 240 6% 10%;
+  --primary-foreground: 0 0% 98%;
+  --primary-glow: 240 5% 25%;
+  --secondary: 240 4% 96%;
+  --secondary-foreground: 240 6% 10%;
+  --accent: 240 4% 96%;
+  --accent-foreground: 240 6% 10%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+  --success: 142 70% 30%;
+  --success-foreground: 0 0% 98%;
+  --warning: 38 90% 45%;
+  --warning-foreground: 240 10% 9%;
+  --ring: 240 5% 64%;
+  --radius: 1rem;
+
+  /* Apple-style glass effects */
+  --glass-bg: hsla(0, 0%, 100%, 0.8);
+  --glass-border: hsla(240, 6%, 90%, 0.5);
+  --glass-shadow: 0 8px 32px 0 hsla(240, 10%, 9%, 0.08);
+  
+  /* Subtle gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(240 6% 10%), hsl(240 5% 25%));
+  --gradient-card: linear-gradient(145deg, hsla(0, 0%, 100%, 0.95), hsla(240, 4%, 96%, 0.9));
+  --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%), hsl(240 4% 96%));
+  --gradient-mesh: radial-gradient(ellipse 800px 400px at 50% 0%, hsla(240, 5%, 25%, 0.03) 0%, transparent 50%);
+  
+  /* Professional shadows */
+  --shadow-card: 0 1px 3px 0 hsla(240, 10%, 9%, 0.04), 0 4px 8px 0 hsla(240, 10%, 9%, 0.04);
+  --shadow-elevated: 0 4px 12px 0 hsla(240, 10%, 9%, 0.08), 0 2px 4px 0 hsla(240, 10%, 9%, 0.04);
+  --shadow-primary: 0 8px 24px 0 hsla(240, 6%, 10%, 0.12);
+  
+  /* Apple-style transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* Sidebar colors */
+  --sidebar-background: 240 4% 96%;
+  --sidebar-foreground: 240 6% 10%;
+  --sidebar-primary: 240 6% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4% 96%;
+  --sidebar-accent-foreground: 240 6% 10%;
+  --sidebar-border: 240 6% 90%;
+  --sidebar-ring: 240 5% 64%;
+}
+
+.dark {
+  /* Apple dark mode */
+  --background: 240 10% 4%;
+  --foreground: 0 0% 98%;
+  --muted: 240 4% 16%;
+  --muted-foreground: 240 5% 64%;
+  --popover: 240 6% 10%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 6% 10%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 4% 16%;
+  --input: 240 4% 16%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 10% 4%;
+  --primary-glow: 240 5% 80%;
+  --secondary: 240 4% 16%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 4% 16%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62% 50%;
+  --destructive-foreground: 0 0% 98%;
+  --success: 142 70% 45%;
+  --success-foreground: 240 10% 4%;
+  --warning: 38 90% 55%;
+  --warning-foreground: 240 10% 4%;
+  --ring: 240 5% 64%;
+
+  /* Dark glass effects */
+  --glass-bg: hsla(240, 6%, 10%, 0.8);
+  --glass-border: hsla(240, 4%, 16%, 0.5);
+  --glass-shadow: 0 8px 32px 0 hsla(240, 10%, 4%, 0.25);
+  
+  /* Dark gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(0 0% 98%), hsl(240 5% 80%));
+  --gradient-card: linear-gradient(145deg, hsla(240, 6%, 10%, 0.95), hsla(240, 4%, 16%, 0.9));
+  --gradient-subtle: linear-gradient(180deg, hsl(240 10% 4%), hsl(240 6% 8%));
+  --gradient-mesh: radial-gradient(ellipse 800px 400px at 50% 0%, hsla(240, 5%, 80%, 0.03) 0%, transparent 50%);
+  
+  /* Dark shadows */
+  --shadow-card: 0 1px 3px 0 hsla(0, 0%, 0%, 0.2), 0 4px 8px 0 hsla(0, 0%, 0%, 0.15);
+  --shadow-elevated: 0 4px 12px 0 hsla(0, 0%, 0%, 0.3), 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);
+  --shadow-primary: 0 8px 24px 0 hsla(0, 0%, 0%, 0.3);
+  
+  /* Dark sidebar */
+  --sidebar-background: 240 5% 6%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 0 0% 98%;
+  --sidebar-primary-foreground: 240 10% 4%;
+  --sidebar-accent: 240 4% 16%;
+  --sidebar-accent-foreground: 0 0% 98%;
+  --sidebar-border: 240 3% 15%;
+  --sidebar-ring: 240 5% 64%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-morphism {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .apple-card {
+    @apply glass-morphism rounded-2xl transition-all duration-300;
+  }
+  
+  .apple-card:hover {
+    @apply shadow-elevated;
+    transform: translateY(-1px);
+  }
+  
+  .organic-flow {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .organic-flow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-mesh);
+    opacity: 1;
+    pointer-events: none;
+  }
+  
+  .metric-card {
+    @apply apple-card p-6 border border-border/50;
+    background: linear-gradient(145deg, hsla(0, 0%, 100%, 0.9), hsla(240, 4%, 96%, 0.7));
+  }
+  
+  .dark .metric-card {
+    background: linear-gradient(145deg, hsla(240, 6%, 10%, 0.9), hsla(240, 4%, 16%, 0.7));
+  }
+}
+
+@layer utilities {
+  @keyframes subtle-float {
+    0%, 100% { 
+      transform: translateY(0px);
+    }
+    50% { 
+      transform: translateY(-2px);
+    }
+  }
+  
+  @keyframes gentle-pulse {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes subtle-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+  
+  .animate-subtle-float {
+    animation: subtle-float 4s ease-in-out infinite;
+  }
+  
+  .animate-gentle-pulse {
+    animation: gentle-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-subtle-pulse {
+    animation: subtle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
