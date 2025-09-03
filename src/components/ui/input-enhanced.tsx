@@ -22,7 +22,7 @@ const InputEnhanced = React.forwardRef<HTMLInputElement, InputProps>(
             {...props}
           />
           <label
-            className="pointer-events-none absolute left-4 top-1.5 text-xs text-muted-foreground transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-focus:top-1.5 peer-focus:text-xs"
+            className="pointer-events-none absolute left-4 top-1.5 text-xs text-muted-foreground transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-sm sm:peer-placeholder-shown:text-base peer-focus:top-1.5 peer-focus:text-xs truncate max-w-[calc(100%-2rem)]"
           >
             {label}
           </label>

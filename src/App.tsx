@@ -217,7 +217,7 @@ const MFCCalculator: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       <motion.div 
-        className="max-w-4xl mx-auto p-4 md:p-6 lg:p-8 space-y-6"
+        className="max-w-4xl mx-auto p-3 sm:p-4 md:p-6 lg:p-8 space-y-4 sm:space-y-6"
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
@@ -241,8 +241,8 @@ const MFCCalculator: React.FC = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3 }}
                     >
-                      <CardTitle className="text-2xl font-light">MFC Calculator</CardTitle>
-                      <p className="text-muted-foreground font-light">Professional Mass Flow Control System</p>
+                      <CardTitle className="text-xl sm:text-2xl font-light">MFC Calculator</CardTitle>
+                      <p className="text-muted-foreground font-light text-sm sm:text-base">Professional Mass Flow Control System</p>
                     </motion.div>
                   </div>
                 </div>
@@ -302,20 +302,20 @@ const MFCCalculator: React.FC = () => {
         </motion.div>
 
         {/* Parameters Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {/* System Parameters */}
           <motion.div variants={cardVariants} whileHover="hover">
             <CardEnhanced variant="glass">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-lg font-light">
+              <CardTitle className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg font-light">
                 <div className="p-2 apple-card border-border/30">
-                  <Settings className="text-primary" size={18} />
+                  <Settings className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                System Parameters
+                <span className="text-sm sm:text-base">System Parameters</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <InputEnhanced 
                   type="number" 
                   label="Total Flow (SLPM)" 
@@ -379,15 +379,15 @@ const MFCCalculator: React.FC = () => {
           <motion.div variants={cardVariants} whileHover="hover">
             <CardEnhanced variant="glass">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-lg font-light">
+              <CardTitle className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg font-light">
                 <div className="p-2 apple-card border-border/30">
-                  <Settings className="text-primary" size={18} />
+                  <Settings className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                Timing Configuration
+                <span className="text-sm sm:text-base">Timing Configuration</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <InputEnhanced 
                   type="number" 
                   min="1"
@@ -414,7 +414,7 @@ const MFCCalculator: React.FC = () => {
                 />
               </div>
               
-              <div className="text-sm text-muted-foreground bg-primary/5 p-3 rounded-xl border border-primary/20">
+              <div className="text-xs sm:text-sm text-muted-foreground bg-primary/5 p-2 sm:p-3 rounded-xl border border-primary/20">
                 <strong>Total Experiment Time:</strong> {getTotalTime()} hours
               </div>
             </CardContent>
@@ -439,7 +439,7 @@ const MFCCalculator: React.FC = () => {
             </CardHeader>
             <CardContent>
               <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6"
                 variants={staggerContainer}
                 initial="hidden"
                 animate="visible"
@@ -459,13 +459,13 @@ const MFCCalculator: React.FC = () => {
                       <Wind className="text-blue-500" size={20} />
                     </motion.div>
                     <div>
-                      <h3 className="font-medium text-foreground">MFC A</h3>
+                      <h3 className="font-medium text-foreground text-sm sm:text-base">MFC A</h3>
                       <p className="text-xs text-muted-foreground">Dry Air</p>
                     </div>
                   </div>
-                  <div className="text-2xl font-light text-foreground mb-1">
+                  <div className="text-xl sm:text-2xl font-light text-foreground mb-1">
                     {results.mfcA.toFixed(2)}
-                    <span className="text-sm text-muted-foreground ml-1">SLPM</span>
+                    <span className="text-xs sm:text-sm text-muted-foreground ml-1">SLPM</span>
                   </div>
                 </motion.div>
 
@@ -484,13 +484,13 @@ const MFCCalculator: React.FC = () => {
                       <Droplets className="text-cyan-500" size={20} />
                     </motion.div>
                     <div>
-                      <h3 className="font-medium text-foreground">MFC B</h3>
+                      <h3 className="font-medium text-foreground text-sm sm:text-base">MFC B</h3>
                       <p className="text-xs text-muted-foreground">Humid Air</p>
                     </div>
                   </div>
-                  <div className="text-2xl font-light text-foreground mb-1">
+                  <div className="text-xl sm:text-2xl font-light text-foreground mb-1">
                     {results.mfcB.toFixed(2)}
-                    <span className="text-sm text-muted-foreground ml-1">SLPM</span>
+                    <span className="text-xs sm:text-sm text-muted-foreground ml-1">SLPM</span>
                   </div>
                 </motion.div>
 
@@ -514,13 +514,13 @@ const MFCCalculator: React.FC = () => {
                       <Activity className="text-primary" size={20} />
                     </motion.div>
                     <div>
-                      <h3 className="font-medium text-foreground">Total Flow</h3>
+                      <h3 className="font-medium text-foreground text-sm sm:text-base">Total Flow</h3>
                       <p className="text-xs text-muted-foreground">System Output</p>
                     </div>
                   </div>
-                  <div className="text-2xl font-light text-foreground mb-1">
+                  <div className="text-xl sm:text-2xl font-light text-foreground mb-1">
                     <AnimatedNumber value={inputs.totalFlow} decimals={0} />
-                    <span className="text-sm text-muted-foreground ml-1">SLPM</span>
+                    <span className="text-xs sm:text-sm text-muted-foreground ml-1">SLPM</span>
                   </div>
                 </motion.div>
               </motion.div>
@@ -544,7 +544,7 @@ const MFCCalculator: React.FC = () => {
                     MFC C (CH2O) Flow Rates
                   </motion.h4>
                   <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-3 gap-3"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
                     variants={staggerContainer}
                     initial="hidden"
                     animate="visible"
